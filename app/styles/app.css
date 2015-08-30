@@ -1,0 +1,36 @@
+body {
+  padding: 15px;
+  margin: 0;
+}
+
+.ph-party-list-item {
+  background: lightblue;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.ph-party-list-item h5 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.ph-party-member-list-item {
+
+}
+
+.ph-party-member-list-item span {
+  margin-right: -0.25em;
+}
+
+.ph-party-member-list-item.is-leader {
+  text-decoration: underline;
+}
+
+.ph-party-member-list-item:after {
+  display: inline-block;
+  content: ', ';
+}
+
+.ph-party-member-list-item:last-of-type:after {
+  content: '';
+}
