@@ -6,7 +6,7 @@ var Party = DS.Model.extend({
   type:         DS.attr(),
   isRecruting:  DS.attr('boolean'),
 
-  leader:       DS.belongsTo('character'),
+  leader:       DS.belongsTo('character', { async: true }),
   members:      DS.hasMany('character', { async: true }),
   schedule:     DS.belongsTo('schedule'),
 });
@@ -28,7 +28,7 @@ Party.reopenClass({
     {
       "id": 3,
       "name": "Party C",
-      "leader": 1,
+      "leader": null,
       "members": [],
     },
   ]

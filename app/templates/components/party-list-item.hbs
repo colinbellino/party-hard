@@ -1,2 +1,8 @@
 <h5>{{party.name}}</h5>
+
 {{party-member-list characters=party.members leader=party.leader}}
+
+<div>
+  {{link-to 'show' 'party' party}}
+  {{link-to 'edit' 'party.edit' party}}
+</div>

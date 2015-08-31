@@ -7,6 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('parties', function() {});
+  this.route('party', { path: 'parties/:party_id' }, function() {
+    this.route('edit');
+  });
 });
 
 export default Router;

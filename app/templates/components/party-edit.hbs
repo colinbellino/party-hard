@@ -1,0 +1,13 @@
+<div>
+
+  <input value="{{party.name}}">
+
+  <h4>Members</h4>
+  {{#each party.members as |character index|}}
+    <div>
+      <span>#{{index}}</span>
+      <input value="{{character.name}}">
+    </div>
+  {{/each}}
+
+</div>
