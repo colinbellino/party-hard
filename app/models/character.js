@@ -4,90 +4,110 @@ var Character = DS.Model.extend({
   name:         DS.attr(),
   comment:      DS.attr(),
 
-  job:          DS.belongsTo('job'),
+  job:          DS.belongsTo('job', { async: true }),
 });
 
 Character.reopenClass({
   FIXTURES: [
     {
       "id": 1,
-      "name": "Aperow"
+      "name": "Aperow",
+      "job": 14,
     },
     {
       "id": 2,
-      "name": "duls"
+      "name": "duls",
+      "job": 5,
     },
     {
       "id": 3,
-      "name": "Eleirah"
+      "name": "Eleirah",
+      "job": 5,
     },
     {
       "id": 4,
-      "name": "Evo"
+      "name": "Evo",
+      "job": 5,
     },
     {
       "id": 5,
-      "name": "heebhan"
+      "name": "heebhan",
+      "job": 10,
     },
     {
       "id": 6,
-      "name": "Hyksos"
+      "name": "Hyksos",
+      "job": 10,
     },
     {
       "id": 7,
-      "name": "Isaer"
+      "name": "Isaer",
+      "job": 10,
     },
     {
       "id": 8,
-      "name": "Jadek"
+      "name": "Jadek",
+      "job": 10,
     },
     {
       "id": 9,
-      "name": "Lyzora"
+      "name": "Lyzora",
+      "job": 10,
     },
     {
       "id": 10,
-      "name": "Maleduin"
+      "name": "Maleduin",
+      "job": 10,
     },
     {
       "id": 11,
-      "name": "Megae"
+      "name": "Megae",
+      "job": 11,
     },
     {
       "id": 12,
-      "name": "Miloolim"
+      "name": "Miloolim",
+      "job": 12,
     },
     {
       "id": 13,
-      "name": "RaoHSamA"
+      "name": "RaoHSamA",
+      "job": 13,
     },
     {
       "id": 14,
-      "name": "Reborn"
+      "name": "Reborn",
+      "job": 14,
     },
     {
       "id": 15,
-      "name": "Thani"
+      "name": "Thani",
+      "job": 15,
     },
     {
       "id": 16,
-      "name": "Bydom"
+      "name": "Bydom",
+      "job": 16,
     },
     {
       "id": 17,
-      "name": "Wiz"
+      "name": "Wiz",
+      "job": 17,
     },
     {
       "id": 18,
-      "name": "Ysefir"
+      "name": "Ysefir",
+      "job": 18,
     },
     {
       "id": 19,
-      "name": "Zakun"
+      "name": "Zakun",
+      "job": 19,
     },
     {
       "id": 20,
-      "name": "Panzer"
+      "name": "Panzer",
+      "job": 20,
     },
   ]
 });

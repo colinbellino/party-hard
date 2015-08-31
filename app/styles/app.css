@@ -4,7 +4,7 @@ body {
 }
 
 .ph-party-list-item {
-  background: lightblue;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px;
   margin-bottom: 15px;
 }
@@ -18,19 +18,18 @@ body {
 
 }
 
-.ph-party-member-list-item span {
-  margin-right: -0.25em;
-}
-
 .ph-party-member-list-item.is-leader {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
-.ph-party-member-list-item:after {
-  display: inline-block;
-  content: ', ';
+.ph-party-member-list-item.damage_dealer {
+  background: rgba(255, 0, 0, 0.1);
 }
 
-.ph-party-member-list-item:last-of-type:after {
-  content: '';
+.ph-party-member-list-item.tank {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.ph-party-member-list-item.support {
+  background: rgba(0, 0, 255, 0.1);
 }
