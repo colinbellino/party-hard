@@ -1,3 +1,7 @@
 <h1>{{party.name}}</h1>
-{{party-member-list characters=party.members leader=party.leader}}
-{{link-to 'edit' 'party.edit' party}}
+
+{{party-member-list party=party}}
+
+<div>
+  {{link-to 'edit' 'party.edit' party}}
+</div>

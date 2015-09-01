@@ -1,13 +1,6 @@
 import Ember from 'ember';
+import FillPartyMembersToMax from '../mixins/fill-party-members-to-max';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(FillPartyMembersToMax, {
   classNames: ['ph-party-member-list'],
-
-  model: function() {
-    return Ember.ArrayProxy.extend(Ember.SortableMixin).create({
-      sortProperties: ['job.role'],
-      sortAscending: false,
-      content: this.get('characters'),
-    });
-  }.property('characters'),
 });
