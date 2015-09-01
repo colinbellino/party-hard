@@ -6,5 +6,5 @@ export default Ember.Component.extend({
 
   isLeader: Ember.computed('leader', 'character', function() {
     return this.get('leader') ===   this.get('character');
-  })
+  }),
 });
