@@ -33,3 +33,27 @@ body {
 .ph-party-member-list-item.support {
   background: rgba(0, 0, 255, 0.1);
 }
+
+/*
+Party member - drop zone
+*/
+.ph-party-member-item-edit.drop-zone-is-visible .drop-zone-inner {
+  height: 20px;
+}
+
+.drop-zone.is-expanded .drop-zone-inner {
+
+}
+
+.draggable-object-target {
+  height: 100%;
+  border: 2px dashed transparent;
+}
+
+.ph-party-member-item-edit.drop-zone-is-visible .draggable-object-target {
+  border-color: rgba(0, 0, 255, 0.1);
+}
+
+.drop-zone-inner {
+  height: 10px;
+}

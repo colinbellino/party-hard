@@ -1,0 +1,17 @@
+{{#draggable-object content=character }}
+
+  <span>#{{index}}</span>
+  <input value="{{character.name}}">
+
+{{/draggable-object}}
+
+<div class="drop-zone {{if showDropZone 'is-expanded'}}">
+  {{#draggable-object-target
+    amount="1"
+    action="move"
+    dragOverAction='dragMemberOver'
+    dragOutAction='dragMemberOut'
+  }}
+    <div class="drop-zone-inner"></div>
+  {{/draggable-object-target}}
+</div>

@@ -4,10 +4,7 @@
 
   <h4>Members</h4>
   {{#each party.members as |character index|}}
-    <div>
-      <span>#{{index}}</span>
-      <input value="{{character.name}}">
-    </div>
+    {{party-member-item-edit character=character index=index moveMember=moveMember}}
   {{/each}}
 
 </div>
