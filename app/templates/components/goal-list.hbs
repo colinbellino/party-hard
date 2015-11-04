@@ -1,0 +1,17 @@
+<div class="row">
+
+  <div class="columns small-12">
+    <h1>Goals</h1>
+  </div>
+
+  {{#each goals as |goal|}}
+    <div class="columns small-12">
+      {{goal.name}}
+
+      <div class="progress small-12">
+        <span class="meter" style="width: {{goal.progress}}%;"></span>
+      </div>
+    </div>
+  {{/each}}
+
+</div>

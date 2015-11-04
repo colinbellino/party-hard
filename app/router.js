@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('party', { path: 'parties/:party_id' }, function() {
     this.route('edit');
   });
+  this.route('goals', function() {});
 });
 
 export default Router;
