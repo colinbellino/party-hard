@@ -1,0 +1,54 @@
+<label>
+  Name
+
+  {{input type="text" value=drop.name}}
+</label>
+
+<div class="row">
+  <div class="columns small-8">
+
+    <label>
+      Price
+
+      {{input type="number" value=drop.price}}
+    </label>
+
+  </div>
+  <div class="columns small-4">
+
+    <label>
+      Quantity
+
+      {{input type="number" value=drop.quantity}}
+    </label>
+
+  </div>
+</div>
+
+<label>
+  Members
+
+  <select {{action 'changeCharacter' on='change'}}>
+    <option value="0" selected={{is-equal character selectedCharacter}}></option>
+    {{#each availableCharacters key="@index" as |character|}}
+      <option value="{{character.id}}" selected={{is-equal character selectedCharacter}}>
+        {{character.name}}
+      </option>
+    {{/each}}
+  </select>
+</label>
+
+{{#if drop.creditors}}
+  <div>
+    <span class="label">Creditors</span>
+    {{#each drop.creditors as |character|}}
+      {{character.name}}
+    {{/each}}
+  </div>
+{{/if}}
+
+<hr>
+
+<button class="button" {{action 'save'}}>Save</button>
+
+{{yield}}

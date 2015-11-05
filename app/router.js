@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('edit');
   });
   this.route('goals', function() {});
+  this.route('drops');
 });
 
 export default Router;
