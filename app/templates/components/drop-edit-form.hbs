@@ -2,6 +2,10 @@
   Name
 
   {{input type="text" value=drop.name}}
+
+  {{#if (v-get drop 'name' 'isDirty')}}
+    {{v-get drop 'name' 'message'}}
+  {{/if}}
 </label>
 
 <div class="row">
@@ -11,6 +15,10 @@
       Price
 
       {{input type="number" value=drop.price}}
+
+      {{#if (v-get drop 'price' 'isDirty')}}
+        {{v-get drop 'price' 'message'}}
+      {{/if}}
     </label>
 
   </div>
@@ -20,6 +28,10 @@
       Quantity
 
       {{input type="number" value=drop.quantity}}
+
+      {{#if (v-get drop 'quantity' 'isDirty')}}
+        {{v-get drop 'quantity' 'message'}}
+      {{/if}}
     </label>
 
   </div>

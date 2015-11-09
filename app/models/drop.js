@@ -1,7 +1,30 @@
 import DS from 'ember-data';
 import Ember from 'ember';
+import { validator, buildValidations } from 'ember-cp-validations';
 
-var Drop = DS.Model.extend({
+var DropValidations = buildValidations({
+  name: validator('presence', true),
+  price: [
+    validator('presence', true),
+    validator('integer'),
+    validator('number', {
+      integer: true,
+      gt: 0,
+      lte: 100
+    })
+  ],
+  quantity: [
+    validator('presence', true),
+    validator('integer'),
+    validator('number', {
+      integer: true,
+      gt: 0,
+      lte: 100
+    })
+  ]
+});
+
+var Drop = DS.Model.extend(DropValidations, {
   name: DS.attr('string'),
   quantity: DS.attr('number'),
   price: DS.attr('number'),
