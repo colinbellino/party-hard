@@ -1,58 +1,63 @@
+// Foundation styles
 @import "settings";
-
 @import "foundation";
 
-.ph-party-list-item {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin-bottom: 15px;
-}
+// Party hard styles
+@import "components/drop_list";
+@import "components/drop_item";
+@import "components/drop_creditor_list";
 
-.ph-party-list-item h5 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+// .ph-party-list-item {
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+//   padding: 15px;
+//   margin-bottom: 15px;
+// }
 
-.ph-party-member-list-item {
+// .ph-party-list-item h5 {
+//   margin-top: 0;
+//   margin-bottom: 15px;
+// }
 
-}
+// .ph-party-member-list-item {
 
-.ph-party-member-list-item.is-leader {
-  font-weight: bold;
-}
+// }
 
-.ph-party-member-list-item.damage_dealer {
-  background: rgba(255, 0, 0, 0.1);
-}
+// .ph-party-member-list-item.is-leader {
+//   font-weight: bold;
+// }
 
-.ph-party-member-list-item.tank {
-  background: rgba(0, 255, 0, 0.1);
-}
+// .ph-party-member-list-item.damage_dealer {
+//   background: rgba(255, 0, 0, 0.1);
+// }
 
-.ph-party-member-list-item.support {
-  background: rgba(0, 0, 255, 0.1);
-}
+// .ph-party-member-list-item.tank {
+//   background: rgba(0, 255, 0, 0.1);
+// }
 
-/*
-Party member - drop zone
-*/
-.ph-party-member-item-edit.drop-zone-is-visible .drop-zone-inner {
-  height: 20px;
-}
+// .ph-party-member-list-item.support {
+//   background: rgba(0, 0, 255, 0.1);
+// }
 
-.drop-zone.is-expanded .drop-zone-inner {
+// /*
+// Party member - drop zone
+// */
+// .ph-party-member-item-edit.drop-zone-is-visible .drop-zone-inner {
+//   height: 20px;
+// }
 
-}
+// .drop-zone.is-expanded .drop-zone-inner {
 
-.draggable-object-target {
-  height: 100%;
-  border: 2px dashed transparent;
-}
+// }
 
-.ph-party-member-item-edit.drop-zone-is-visible .draggable-object-target {
-  border-color: rgba(0, 0, 255, 0.1);
-}
+// .draggable-object-target {
+//   height: 100%;
+//   border: 2px dashed transparent;
+// }
 
-.drop-zone-inner {
-  height: 10px;
-}
+// .ph-party-member-item-edit.drop-zone-is-visible .draggable-object-target {
+//   border-color: rgba(0, 0, 255, 0.1);
+// }
+
+// .drop-zone-inner {
+//   height: 10px;
+// }

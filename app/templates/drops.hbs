@@ -3,9 +3,23 @@
 
     <h1>Drops</h1>
 
-    {{drop-list drops=model.drops}}
+    {{!-- TODO: split this into tabs on small screens --}}
+    <div class="row">
+      <div class="columns small-12 medium-6">
 
-    {{drop-edit-form characters=model.characters store=store}}
+        <h3>My drops</h3>
+        {{drop-list drops=model.userDrops}}
+
+      </div>
+      <div class="columns small-12 medium-6">
+
+        <h3>Shared with me</h3>
+        {{drop-list drops=model.deptorsDrops}}
+
+      </div>
+    </div>
+
+    {{!-- {{drop-edit-form characters=model.characters store=store}} --}}
 
   </div>
 </div>

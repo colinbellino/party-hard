@@ -1,26 +1,5 @@
 {{#each filteredDrops as |drop|}}
-  <div class="panel">
-    <h5>
-      {{drop.name}}
-      <small>x{{drop.quantity}}</small>
-    </h5>
-
-    <div>
-      <span class="label">Total</span>
-      {{!-- TODO: Write an helper to format prices using kk / m --}}
-      {{drop.price}}
-    </div>
-
-    <div>
-      <span class="label">Per person</span>
-      {{drop.pricePerPerson}}
-    </div>
-
-    <div>
-      <span class="label">Creditors</span>
-      {{#each drop.creditors as |character|}}
-        {{character.name}}
-      {{/each}}
-    </div>
-  </div>
+  {{drop-item drop=drop}}
+{{else}}
+  No drops :(
 {{/each}}

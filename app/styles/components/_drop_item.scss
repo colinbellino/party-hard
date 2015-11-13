@@ -1,0 +1,22 @@
+.drop-item {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    box-sizing: border-box;
+    max-height: 100%;
+  }
+
+  > .name,
+  > .drop-creditor-list {
+    flex: 1 1 75%;
+    min-width: 75%;
+  }
+
+  > .price,
+  > .price-per-character {
+    flex: 1 1 25%;
+    min-width: 25%;
+    text-align: right;
+  }
+}

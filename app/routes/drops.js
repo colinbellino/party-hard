@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     let store = this.store;
 
     return Ember.RSVP.hash({
-      drops: store.findAll('drop'),
+      userDrops: store.findAll('drop'), // TODO: use real queries to the server
+      deptorsDrops: store.findAll('drop'), // TODO: use real queries to the server
       characters: store.findAll('character'),
     });
   }
