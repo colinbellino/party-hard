@@ -1,0 +1,15 @@
+.tab-list {
+
+}
+
+.tab-list.-full {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .tab-item {
+    box-sizing: border-box;
+    flex: 1;
+    max-height: 100%;
+    text-align: center;
+  }
+}

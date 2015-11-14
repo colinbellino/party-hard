@@ -6,7 +6,6 @@ var DropValidations = buildValidations({
   name: validator('presence', true),
   price: [
     validator('presence', true),
-    validator('integer'),
     validator('number', {
       integer: true,
       gt: 0,
@@ -15,7 +14,6 @@ var DropValidations = buildValidations({
   ],
   quantity: [
     validator('presence', true),
-    validator('integer'),
     validator('number', {
       integer: true,
       gt: 0,

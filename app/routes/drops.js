@@ -6,8 +6,7 @@ export default Ember.Route.extend({
 
     return Ember.RSVP.hash({
       userDrops: store.findAll('drop'), // TODO: use real queries to the server
-      deptorsDrops: store.findAll('drop'), // TODO: use real queries to the server
-      characters: store.findAll('character'),
+      friendsDrops: store.findAll('drop'), // TODO: use real queries to the server
     });
   }
 });

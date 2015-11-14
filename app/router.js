@@ -11,7 +11,11 @@ Router.map(function() {
     this.route('edit');
   });
   this.route('goals', function() {});
-  this.route('drops');
+  this.route('drops', function() {
+    this.route('mine');
+    this.route('friends');
+    this.route('new');
+  });
 });
 
 export default Router;

@@ -1,27 +1,22 @@
-<div class="row">
-  <div class="columns small-12">
+<ul class="tabs tab-list -full">
+  {{#link-to "drops.mine" tagName="li" class="tab-title tab-item"}}
+    <a href="{{view.href}}">My drops</a>
+  {{/link-to}}
+  {{#link-to "drops.friends" tagName="li" class="tab-title tab-item"}}
+    <a href="{{view.href}}">Shared with me</a>
+  {{/link-to}}
+</ul>
 
-    <h1>Drops</h1>
-
-    {{!-- TODO: split this into tabs on small screens --}}
+<div class="tabs-content">
+  <div class="content active">
     <div class="row">
-      <div class="columns small-12 medium-6">
+      <div class="columns small-12">
 
-        <h3>My drops</h3>
-        {{drop-list drops=model.userDrops}}
+        {{outlet}}
 
-      </div>
-      <div class="columns small-12 medium-6">
-
-        <h3>Shared with me</h3>
-        {{drop-list drops=model.deptorsDrops}}
+        {{#link-to "drops.new" class="button"}}New drop!{{/link-to}}
 
       </div>
     </div>
-
-    {{!-- {{drop-edit-form characters=model.characters store=store}} --}}
-
   </div>
 </div>
-
-{{outlet}}
