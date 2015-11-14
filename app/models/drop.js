@@ -32,7 +32,13 @@ var Drop = DS.Model.extend(DropValidations, {
   creditors: DS.hasMany('character', { async: true }),
 
   pricePerPerson: Ember.computed('price', 'creditors.length', function () {
-    return Math.round(this.get('price') / this.get('creditors.length'));
+    let numberOfCreditors = this.get('creditors.length');
+
+    if (numberOfCreditors > 0) {
+      return Math.round(this.get('price') / numberOfCreditors);
+    }
+
+    return 0;
   })
 });
 

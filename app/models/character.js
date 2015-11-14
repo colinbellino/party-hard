@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 var Character = DS.Model.extend({
-  name:         DS.attr(),
-  comment:      DS.attr(),
+  name:         DS.attr("string"),
+  comment:      DS.attr("string"),
 
   job:          DS.belongsTo('job', { async: true }),
 });
