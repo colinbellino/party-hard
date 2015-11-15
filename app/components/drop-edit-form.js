@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  availableCharacters: Ember.computed('characters', 'drop.creditors', function () {
+  availableCharacters: Ember.computed('characters', 'drop.deptors', function () {
     return this.get('characters').filter(function (character) {
-      return !this.get('drop.creditors').contains(character);
+      return !this.get('drop.deptors').contains(character);
     }.bind(this));
   }),
 
@@ -23,8 +23,8 @@ export default Ember.Component.extend({
       const selectedValue = selectElement[selectElement.selectedIndex].value;
       const selectedCharacter = characters.findBy('id', selectedValue);
 
-      this.get('drop.creditors').then(function (creditors) {
-        creditors.pushObject(selectedCharacter);
+      this.get('drop.deptors').then(function (deptors) {
+        deptors.pushObject(selectedCharacter);
       });
 
       selectElement.selectedIndex = 0;

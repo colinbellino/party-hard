@@ -27,36 +27,17 @@ var Drop = DS.Model.extend(DropValidations, {
   quantity: DS.attr('number'),
   price: DS.attr('number'),
 
-  creditors: DS.hasMany('character', { async: true }),
+  deptors: DS.hasMany('character'),
 
-  pricePerPerson: Ember.computed('price', 'creditors.length', function () {
-    let numberOfCreditors = this.get('creditors.length');
+  pricePerPerson: Ember.computed('price', 'deptors.length', function () {
+    let numberOfDeptors = this.get('deptors.length');
 
-    if (numberOfCreditors > 0) {
-      return Math.round(this.get('price') / numberOfCreditors);
+    if (numberOfDeptors > 0) {
+      return Math.round(this.get('price') / numberOfDeptors);
     }
 
     return 0;
   })
-});
-
-Drop.reopenClass({
-  FIXTURES: [
-    {
-      "id": 1,
-      "name": "Full Plate Helmet",
-      "price": 10000000,
-      "quantity": 1,
-      "creditors": [1, 2, 3],
-    },
-    {
-      "id": 2,
-      "name": "Enchant Armor (C)",
-      "price": 300000,
-      "quantity": 8,
-      "creditors": [1, 2],
-    },
-  ]
 });
 
 export default Drop;
